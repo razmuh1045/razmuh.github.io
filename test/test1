@@ -1,0 +1,2 @@
+rsync -avu --progress "/Users/muhammadaliraza/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Shared Desktop/website/my-travel-website-test/" "/Users/muhammadaliraza/Library/Mobile Documents/com~apple~CloudDocs/Desktop/Shared Desktop/website/my-travel-website/"
+first edit
