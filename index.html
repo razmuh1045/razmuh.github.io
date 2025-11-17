@@ -27,9 +27,8 @@
   <div class="flex items-center space-x-2">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Globe_icon.svg/64px-Globe_icon.svg.png" alt="Logo" class="w-8 h-8">
     <a href="/index.html" class="text-2xl font-bold px-4 py-2 border border-gray-300 rounded-xl hover:bg-gray-100 transition">
-    TripVizz
-</a>
-
+      TripVizz
+    </a>
   </div>
 
   <!-- Desktop Nav -->
@@ -71,7 +70,7 @@
     </svg>
   </button>
 </header>
-<!-- Header with Responsive Dropdown -->
+
 <!-- Mobile menu -->
 <nav id="mobile-menu" class="flex-col space-y-2 bg-white border-t border-gray-200 px-6 py-4 md:hidden">
   <div class="space-y-2">
@@ -97,20 +96,40 @@
   </button>
 </nav>
 
-<!-- Main Feature Grid (Ad Section) -->
+<!-- Main Feature Grid (Dynamic Ads Section) -->
+ <h2 class="text-center text-2xl font-bold text-red-600 mt-10">Exclusive</h2>
+
 <section class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-4 gap-8">
-  <div class="bg-gray-100 rounded-xl h-64 flex items-center justify-center text-gray-500 font-medium border border-gray-300">
-    Ad Space 1
+
+
+<a href="/ads/ad1.html">
+  <div class="bg-gray-100 rounded-xl h-64 overflow-hidden border border-gray-300">
+    <img src="/ads/ad1.png" class="w-full h-full object-cover" alt="Ad 1">
   </div>
-  <div class="bg-gray-100 rounded-xl h-64 flex items-center justify-center text-gray-500 font-medium border border-gray-300">
-    Ad Space 2
+</a>
+
+
+  <a href="/ads/ad2.html">
+  <div class="bg-gray-100 rounded-xl h-64 overflow-hidden border border-gray-300">
+    <img src="/ads/ad2.jpg" class="w-full h-full object-cover" alt="Ad 2">
   </div>
-  <div class="bg-gray-100 rounded-xl h-64 flex items-center justify-center text-gray-500 font-medium border border-gray-300">
-    Ad Space 3
+</a>
+
+
+<a href="/ads/ad3.html">
+  <div class="bg-gray-100 rounded-xl h-64 overflow-hidden border border-gray-300">
+    <img src="/ads/ad3.jpg" class="w-full h-full object-cover" alt="Ad 3">
   </div>
-  <div class="bg-gray-100 rounded-xl h-64 flex items-center justify-center text-gray-500 font-medium border border-gray-300">
-    Ad Space 4
+</a>
+
+
+<a href="/ads/ad4.html">
+  <div class="bg-gray-100 rounded-xl h-64 overflow-hidden border border-gray-300">
+    <img src="/ads/ad4.jpg" class="w-full h-full object-cover" alt="Ad 4">
   </div>
+</a>
+
+
 </section>
 
 <!-- Example Travel Highlights -->
@@ -145,6 +164,7 @@
         <li><a href="#" class="hover:text-blue-700">Terms of Service</a></li>
       </ul>
     </div>
+
     <div>
       <h4 class="font-bold mb-3">Follow</h4>
       <ul class="space-y-2">
@@ -153,18 +173,20 @@
         <li><a href="#" class="hover:text-blue-700">TikTok</a></li>
       </ul>
     </div>
+
     <div>
       <h4 class="font-bold mb-3">Subscribe</h4>
       <p class="text-gray-600 mb-3">Get the latest travel stories and guides.</p>
       <input type="email" placeholder="Your email" class="w-full border border-gray-300 px-3 py-2 rounded mb-3">
       <button class="w-full bg-blue-700 text-white py-2 rounded hover:bg-blue-800">Subscribe</button>
     </div>
+
   </div>
+
   <div class="text-center text-gray-500 text-xs mt-8">
     © 2025 Tripvizz. All rights reserved.
   </div>
 </footer>
-<!-- Footer -->
 
 <!-- Mobile Menu Script -->
 <script>
@@ -181,5 +203,24 @@
     }
   });
 </script>
+
+<!-- Dynamic Ad Loader Script -->
+<script>
+  const ads = {
+    ad1: "/ads/ad1.html",
+    ad2: "/ads/ad2.html",
+    ad3: "/ads/ad3.html",
+    ad4: "/ads/ad4.html"
+  };
+
+  Object.keys(ads).forEach(id => {
+    fetch(ads[id])
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById(id).innerHTML = html;
+      });
+  });
+</script>
+
 </body>
 </html>

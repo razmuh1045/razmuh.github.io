@@ -1,0 +1,31 @@
+Want clickable ads?
+
+If you want the whole ad box to link to a page (affiliate link, booking link, etc.) you can use:
+
+""
+<a href="https://your-ad-link.com" target="_blank">
+  <img src="/ads/ad1.jpg" class="w-full h-full object-cover rounded-xl border border-gray-300" alt="Ad 1">
+</a>
+
+""
+⭐ Want Google Ads later?
+
+No problem — each ad file can easily be changed to:
+
+""
+<img src="/ads/ad1.jpg" class="w-full h-32 object-cover rounded-t-xl">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-XXXX"
+     data-ad-slot="YYYY"
+     data-ad-format="auto"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+""
+
+
+Your website already loads these files automatically on every page.
